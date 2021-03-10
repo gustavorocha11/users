@@ -1,10 +1,12 @@
 ## User Challenge 
 
-This is a simple CRUD user made with typeScript and nodeJs
+O que avaliamos:
 
-Is a simple project but made with best practices.
+- Seu código
+- Organização
+- Boas práticas
 
-You can test it creating an user, updatind, find it and delete it.
+## Tutorial and Routes
 
 1 First, clone this porject:
 
