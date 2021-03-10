@@ -1,4 +1,3 @@
-//Dependencies
 import * as LocalStorage from 'node-localstorage';
 
 import ResponseDto from './../DTO/response';
@@ -10,21 +9,19 @@ class UserController{
     constructor(){}
 
     create(req, res){
-        let data:User = req.body; //get data from client in body
-        //simulate database instance
-        let localStorage = new LocalStorage.LocalStorage('./scratch');    
+        let data:User = req.body;
+        let localStorage = new LocalStorage.LocalStorage('./scratch');
         let previous = localStorage.getItem(data.email);
-        if(previous != undefined){ // check if the user does exist
+        if(previous != undefined){
             res.send(new ResponseDto(200,"That email address is registered yet",{}));
         }else{
-            localStorage.setItem(data.email, JSON.stringify(data)); // register in 'data base'
+            localStorage.setItem(data.email, JSON.stringify(data));
             res.send(new ResponseDto(200,"The user was created successfullt",data));
         }
     }
 
     update(req, res){
         let data = req.body;
-        //simulate database instance
         let localStorage = new LocalStorage.LocalStorage('./scratch');
         let previous = localStorage.getItem(data.email);
         if(previous == undefined){
@@ -38,7 +35,6 @@ class UserController{
     }
 
     findByEmail(req, res){
-        //simulate database instance
         let localStorage = new LocalStorage.LocalStorage('./scratch');
         let user = localStorage.getItem(req.params.id);
         if(user == undefined){
@@ -50,7 +46,6 @@ class UserController{
     }
 
     delete(req, res){
-        //simulate database instance
         let localStorage = new LocalStorage.LocalStorage('./scratch');
         let user = localStorage.getItem(req.params.id);
         if(user == undefined){
