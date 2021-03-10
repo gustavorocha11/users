@@ -1,3 +1,5 @@
+## User Challenge 
+
 This is a simple CRUD user made with typeScript and nodeJs
 
 Is a simple project but made with best practices.
@@ -5,20 +7,18 @@ Is a simple project but made with best practices.
 You can test it creating an user, updatind, find it and delete it.
 
 1 First, clone this porject:
- 
-2 Go to the folder projec:
 
-	cd backendNodeTypeScriptScrudUser
-
-3 install dependencies:
+2 install dependencies:
 
 	npm i
 
-4 run project:
+3 run project:
 
 	npm run start
 
-This is the list of services, feel free to test it and update it:
+API REST running in port 3000
+
+This is the list of services and routes:
 
 Create user:
 
@@ -27,9 +27,9 @@ Create user:
 	Data:
 
 	{
-		"name":"Leonardo",
-		"lastName": "Alvarado",
-		"email":"ing.leonardo92@gmail.com",
+		"name":"Gustavo",
+		"lastName": "Rocha",
+		"email":"teste@gmail.com",
 		"password":"12345678"
 	}
 
@@ -39,9 +39,9 @@ Update user:
 	Metoth: POST
 	Data:
 	{
-		"name":"Leonardo Jose",
-		"lastName": "Alvarado Padua",
-		"email":"ing.leonardo92@gmail.com",
+		"name":"Lucas",
+		"lastName": "Alberto",
+		"email":"teste2@gmail.com",
 		"password":"newpass"
 	}
 	
